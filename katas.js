@@ -22,3 +22,6 @@ function topThreeWords(text) {
   }
   return arr.sort((a,b)=>b[1]-a[1]).slice(0,3).map(v=>v[0])
 }
+ //Solution 2
+
+topThreeWords=(a,b=a.toLowerCase().split(/[ ,./]+/))=>b.filter((e,i)=>i==b.indexOf(e)).filter(a=>/[a-z]+/.test(a)).map(a=>[a,b.filter(b=>b==a).length]).sort((a,b)=>b[1]-a[1]).slice(0,3).map(a=>a[0]);

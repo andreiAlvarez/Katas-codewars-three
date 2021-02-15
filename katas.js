@@ -25,3 +25,51 @@ function topThreeWords(text) {
  //Solution 2
 
 topThreeWords=(a,b=a.toLowerCase().split(/[ ,./]+/))=>b.filter((e,i)=>i==b.indexOf(e)).filter(a=>/[a-z]+/.test(a)).map(a=>[a,b.filter(b=>b==a).length]).sort((a,b)=>b[1]-a[1]).slice(0,3).map(a=>a[0]);
+
+// kata 4 
+
+function decode(str) {
+  const morse = {
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    5: ".....",
+    6: "-....",
+    7: "--...",
+    8: "---..",
+    9: "----.",
+    0: "-----",
+    a: ".-",
+    b: "-...",
+    c: "-.-.",
+    d: "-..",
+    e: ".",
+    f: "..-.",
+    g: "--.",
+    h: "....",
+    i: "..",
+    j: ".---",
+    k: "-.-",
+    l: ".-..",
+    m: "--",
+    n: "-.",
+    o: "---",
+    p: ".--.",
+    q: "--.-",
+    r: ".-.",
+    s: "...",
+    t: "-",
+    u: "..-",
+    v: "...-",
+    w: ".--",
+    x: "-..-",
+    y: "-.--",
+    z: "--.."
+  };
+  const morse2 = {};
+  for (let i in morse) {
+    morse2[morse[i]] = i;
+  }
+  return str.split` `.map(v => morse2[v] || " ").join``;
+};

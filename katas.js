@@ -106,3 +106,7 @@ function alphabetWar(fight) {
     ? "Left side wins!"
     : "Let's fight again!";
 };
+
+// solution 2
+
+const alphabetWar = (s,a='wpbs zdqm',o) => (o=[...s.replace(/\w?\*\w?/g,'')].reduce((w,x)=>w+(a.includes(x)?a.indexOf(x)-4:0),0),o<0?'Left side wins!':o>0?'Right side wins!':"Let's fight again!");

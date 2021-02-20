@@ -110,3 +110,22 @@ function alphabetWar(fight) {
 // solution 2
 
 const alphabetWar = (s,a='wpbs zdqm',o) => (o=[...s.replace(/\w?\*\w?/g,'')].reduce((w,x)=>w+(a.includes(x)?a.indexOf(x)-4:0),0),o<0?'Left side wins!':o>0?'Right side wins!':"Let's fight again!");
+
+// kata 7 
+
+var child = function(bird1, bird2) {
+  if (bird1 === bird2) return false;
+  return getDifference(bird1, bird2) < 3 ? true : false;
+};
+var grandchild = function(bird1, bird2) {
+  if (bird1.length === 1 && bird2.length === 1 && bird2 !== bird1) return false;
+  return getDifference(bird1, bird2) <= 4 ? true : false;
+};
+
+function getDifference(bird1, bird2) {
+  let dif = 0;
+  for (let i = 0; i < bird1.length; i++) {
+    if (bird1.slice(i, i + 1) !== bird2.slice(i, i + 1)) dif++;
+  }
+  return dif;
+};

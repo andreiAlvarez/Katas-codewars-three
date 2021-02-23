@@ -129,3 +129,22 @@ function getDifference(bird1, bird2) {
   }
   return dif;
 };
+
+// kata 8 
+const capitalizeFirstLetter = word =>
+  `${word.slice(0, 1).toUpperCase()}${word.slice(1).toLowerCase()}`
+
+function titleCase(title, minorWords = '') {
+  const minorWordsArray = minorWords.toLowerCase().split(' ')
+  const result = title
+    .split(' ')
+    .map((word, i) => {
+      if (i === 0) return capitalizeFirstLetter(word)
+
+      return minorWordsArray.includes(word.toLowerCase())
+        ? word.toLowerCase()
+        : capitalizeFirstLetter(word)
+    })
+    .join(' ')
+
+  return result;

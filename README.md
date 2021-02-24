@@ -16,3 +16,4 @@ kata 7: https://www.codewars.com/kata/59bb02f5623654a0dc000119/train/javascript
 
 kata 8: https://www.codewars.com/kata/title-case
  
+kata 9: https://www.codewars.com/kata/59f8dd1132b8b9af150001ea/train/javascript

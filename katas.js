@@ -148,3 +148,15 @@ function titleCase(title, minorWords = '') {
     .join(' ')
 
   return result;
+
+    // kata 9 
+    
+    const toBits = (set) => {
+    let bitmap = new Array(5000).fill(0);
+    set.split("\n").map(e => bitmap[e] = 1)
+    return bitmap
+};
+    
+    // solution 2
+    
+    const toBits = (set) => set.split`\n`.reduce((a,b)=>(a[b]=1,a),Array(5000).fill(0));

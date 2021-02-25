@@ -160,3 +160,7 @@ function titleCase(title, minorWords = '') {
     // solution 2
     
     const toBits = (set) => set.split`\n`.reduce((a,b)=>(a[b]=1,a),Array(5000).fill(0));
+// kata 10
+    
+    const findOutChristmasWeekday = date =>
+  (new Date(date + '')).toLocaleDateString('en-US', {weekday: 'long'}); 

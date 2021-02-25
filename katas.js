@@ -164,3 +164,7 @@ function titleCase(title, minorWords = '') {
     
     const findOutChristmasWeekday = date =>
   (new Date(date + '')).toLocaleDateString('en-US', {weekday: 'long'}); 
+
+  // kata 11
+    
+  const tetrahedron = size => (size * (size + 1) * (size + 2)) / 6; 

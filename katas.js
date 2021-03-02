@@ -194,3 +194,29 @@ function titleCase(title, minorWords = '') {
     //solution 2
     
 const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...["w*(1+r/30)", "(100*w)/(101.3-2.67123*r)", "w*(r**0.10)"].map(a => eval(a))));
+
+    
+    // kata 14 
+    
+    function thirt(n) {
+    const dict = [1, 10, 9, 12, 3, 4];
+  let sum = n;
+  while (1) {
+    let temp = sum;
+    sum = sum.toString().split``.reverse().join``.split``
+      .map((v, i) => {
+        v = v * dict[i % 6];
+        return v;
+      })
+      .reduce((a, b) => a + b, 0);
+    if (sum === temp) {
+      break;
+    }
+  }
+  return sum;
+}; 
+    
+    // solution 2 
+    
+    const thirt = n =>
+  n < 100 ? n : thirt([...`${n}`].reverse().reduce((pre, val, idx) => pre + 10 ** idx % 13 * val, 0));

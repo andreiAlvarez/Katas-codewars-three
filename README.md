@@ -25,3 +25,5 @@ kata 11: https://www.codewars.com/kata/530e259c7bc88a4ab9000754/train/javascript
 kata 12: https://www.codewars.com/kata/51e704f2d8dbace389000279/train/javascript
 
 kata 13: https://www.codewars.com/kata/595bbea8a930ac0b91000130/train/javascript
+
+kata 14: https://www.codewars.com/kata/564057bc348c7200bd0000ff/train/javascript

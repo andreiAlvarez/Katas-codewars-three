@@ -240,3 +240,13 @@ const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...
  }
   return str.slice(0,-1);
 };
+
+    // kata 16 
+    
+    function alphabetized(s) {
+  var ans = "";
+  for (var i = 97; i < 123; ++i)
+    for (var j = 0; j < s.length; j++)
+      if (s[j].toLowerCase().charCodeAt() == i) ans += s[j];
+  return ans;
+}; 

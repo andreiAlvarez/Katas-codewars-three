@@ -220,3 +220,23 @@ const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...
     
     const thirt = n =>
   n < 100 ? n : thirt([...`${n}`].reverse().reduce((pre, val, idx) => pre + 10 ** idx % 13 * val, 0));
+
+    // kata 15
+    
+    const a = n => {
+ if (n%2!==0) n--
+  if (n<=2) return ''
+  let str = ''
+  for (let i=0;i<n;i++){
+   if (i===0){
+     str+=' '.repeat(n-i-1)+'A'+' '.repeat(n-i-1)+'\n'
+   }else if (i===1){
+     str+=' '.repeat(n-i-1)+'A'+' '+'A'+' '.repeat(n-i-1)+'\n'
+   }else if (i===(n/2)){
+     str+=' '.repeat(n-i-1)+'A'+' A'.repeat(n/2)+' '.repeat(n-i-1)+'\n'
+   }else {
+     str+=' '.repeat(n-i-1)+'A'+' '.repeat(i*2-1)+'A'+' '.repeat(n-i-1)+'\n'
+   }
+ }
+  return str.slice(0,-1);
+};

@@ -250,3 +250,16 @@ const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...
       if (s[j].toLowerCase().charCodeAt() == i) ans += s[j];
   return ans;
 }; 
+
+    // kata 17 
+    const trotter = n =>{
+  let check = n;
+  let arr = n.toString().split``;
+  for (let i = 1; i < 1000; i++) {
+    n = check * i;
+    arr = arr.concat(n.toString().split``);
+    arr = [...new Set(arr)];
+    if (arr.length === 10) return n;
+  }
+  return "INSOMNIA";
+};

@@ -263,3 +263,7 @@ const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...
   }
   return "INSOMNIA";
 };
+    
+    // solution 2
+    
+    trotter=(a,b=1,c=new Set(''+a))=>a?c.size==10?a*b:trotter(a,++b,new Set([...c,...''+a*b])):'INSOMNIA'; 

@@ -267,3 +267,18 @@ const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...
     // solution 2
     
     trotter=(a,b=1,c=new Set(''+a))=>a?c.size==10?a*b:trotter(a,++b,new Set([...c,...''+a*b])):'INSOMNIA'; 
+
+    // kata 18 
+    
+    function mixwords(str){
+  if (typeof str === "string") {
+    return str.replace(/[a-z]+/gi, v => {
+      if (v.length > 2)
+        return (
+          v.slice(0, 1) +
+          v.slice(1, -1).split``.sort((a, b) => Math.random() - 0.5).join`` +
+          v.slice(-1)
+        );
+      return v;
+    });
+  };

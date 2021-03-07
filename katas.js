@@ -282,3 +282,15 @@ const calculate1RM = (w, r) => r == 1 ? w : r == 0 ? 0 : Math.round(Math.max(...
       return v;
     });
   };
+
+        // kata 19 
+        
+        function amidakuji(arr){
+let res = Array.from({ length: arr[0].length + 1 },(_, index) => index);
+  arr.map((level)=>{
+    let n = -1;
+    while((n = level.indexOf('1', n + 1)) !== -1)
+      [res[n+1], res[n]] = [res[n], res[n+1]];
+  });
+  return res;
+};

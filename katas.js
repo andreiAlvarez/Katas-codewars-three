@@ -323,3 +323,9 @@ let res = Array.from({ length: arr[0].length + 1 },(_, index) => index);
     return v.toLowerCase();
   });
 }; 
+
+         // solution 2
+        
+        let map = {a:'α',b:'β',d:'δ',e:'ε',i:'ι',k:'κ',n:'η',o:'θ',p:'ρ',r:'π',t:'τ',u:'μ',v:'υ',w:'ω',x:'χ',y:'γ'};
+
+const GrεεκL33t = str => str.toLowerCase().replace(/./g, function(v){ return map[v] || v });

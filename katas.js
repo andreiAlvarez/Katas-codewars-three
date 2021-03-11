@@ -329,3 +329,17 @@ let res = Array.from({ length: arr[0].length + 1 },(_, index) => index);
         let map = {a:'α',b:'β',d:'δ',e:'ε',i:'ι',k:'κ',n:'η',o:'θ',p:'ρ',r:'π',t:'τ',u:'μ',v:'υ',w:'ω',x:'χ',y:'γ'};
 
 const GrεεκL33t = str => str.toLowerCase().replace(/./g, function(v){ return map[v] || v });
+
+        // kata 21
+        
+        function createFunctions(n) {
+  var callbacks = [];
+
+  for (let i = 0; i < n; i++) {
+    callbacks.push(function() {
+      return i;
+    });
+  }
+
+  return callbacks;
+};

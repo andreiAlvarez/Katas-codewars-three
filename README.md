@@ -41,3 +41,5 @@ kata 19: https://www.codewars.com/kata/5af4119888214326b4000019/train/javascript
 kata 20: https://www.codewars.com/kata/556025c8710009fc2d000011/train/javascript
 
 kata 21: https://www.codewars.com/kata/526ec46d6f5e255e150002d1/train/javascript
+
+kata 22: https://www.codewars.com/kata/52b305bec65ea40fe90007a7/train/javascript

@@ -343,3 +343,20 @@ const GrεεκL33t = str => str.toLowerCase().replace(/./g, function(v){ return 
 
   return callbacks;
 };
+
+        // kata 22
+        
+        const grabscrab = (anagram, dictionary) => {
+    anagram = anagram
+    .split("")
+    .sort()
+    .join();
+  let arr = dictionary.slice().map(
+    v =>
+      v
+        .split("")
+        .sort()
+        .join() === anagram
+  );
+  return dictionary.filter((v, i) => arr[i] === true);
+};

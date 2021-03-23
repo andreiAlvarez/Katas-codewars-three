@@ -390,3 +390,7 @@ const GrεεκL33t = str => str.toLowerCase().replace(/./g, function(v){ return 
         
         const isAlt = word => !/[aeiou]{2}|[^aeiou]{2}/.test(word);
 }
+
+    // kata 24
+    
+    const search = searchTerm => TITLES.filter(v => new RegExp(searchTerm, "i").test(v));

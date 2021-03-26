@@ -394,3 +394,22 @@ const GrεεκL33t = str => str.toLowerCase().replace(/./g, function(v){ return 
     // kata 24
     
     const search = searchTerm => TITLES.filter(v => new RegExp(searchTerm, "i").test(v));
+
+    // kata 25
+    
+    function createSecretHolder(secret) {
+  return {
+    getSecret: function() {
+      return secret;
+    },
+    setSecret: function(v) {
+      secret = v;
+    }
+  };
+}
+    
+    // solution 2
+    
+    const createSecretHolder = secret =>
+  ({getSecret: () => secret,
+    setSecret: val => secret = val});
